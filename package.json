@@ -1,0 +1,14 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {
+    "@prettier/plugin-pug": "^1.16.5",
+    "prettier": "^2.3.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4",
+    "pug": "^3.0.2"
+  }
+}

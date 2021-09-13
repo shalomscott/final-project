@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title Students
+    link(rel='stylesheet', href='/students.css')
+  body
+    form.container(action='')
+      label.row(for='toar') Toar:
+        select#toar(name='toar')
+          option(value='all') All
+          option(value='ba') BA
+          option(value='ma') MA
+          option(value='phd') PHD
+      label.row(for='city') City:
+        input#city(type='text', name='city')
+      label.row(for='avg') Min. avg. grade:
+        input#avg(type='number', name='avg', min=0, max=100)
+      button(type='submit') סנן
+
+    form.container
+      .row.header
+        span ID
+        span Name
+        span
+        span
+      each student in students
+        .row
+          span= student.id
+          span= student.name
+          button(
+            type='submit',
+            formaction=`delete/${student._id}`,
+            formmethod='POST',
+            onclick='return confirm(\'Are you sure?\')'
+          ) delete
+          button update
